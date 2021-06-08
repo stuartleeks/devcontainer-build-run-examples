@@ -32,4 +32,4 @@ jobs:
         with:
           subFolder: build-args
           imageName: ghcr.io/stuartleeks/devcontainer-build-run-examples-build-args
-          runCmd: echo $BUILD_ARG_TEST && [[ $BUILD_ARG_TEST == "Hello from build-args!#fail" ]]
+          runCmd: echo $BUILD_ARG_TEST && [[ $BUILD_ARG_TEST == "Hello build-args!" ]]
