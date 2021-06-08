@@ -29,11 +29,13 @@ jobs:
 
       - name: Build and run dev container task
         uses: stuartleeks/devcontainer-build-run@sl/env # <-- don't do this!
+        env:
+          WORLD: World
         with:
           subFolder: run-args
           imageName: ghcr.io/stuartleeks/devcontainer-build-run-examples-run-args
           runCmd: echo "$HELLO - $WORLD" && [[ "$HELLO - $WORLD" == "Hello - World" ]]
           env: |
             HELLO=Hello
-            WORLD=World
+            WORLD
 
