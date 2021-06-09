@@ -14,9 +14,6 @@ jobs:
       - name: Checkout (GitHub)
         uses: actions/checkout@v2
 
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v1
-      
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
@@ -28,7 +25,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}        
 
       - name: Build and run dev container task
-        uses: stuartleeks/devcontainer-build-run@v0.1-alpha # <-- don't do this!
+        uses: stuartleeks/devcontainer-build-run@v0.1-alpha
         with:
           subFolder: dockerfile-context
           imageName: ghcr.io/stuartleeks/devcontainer-build-run-examples-dockerfile-context
