@@ -29,7 +29,7 @@ jobs:
           WORLD: World
         with:
           subFolder: acr
-          imageName: dcbuilds.azurecr.io/stuartleeks/devcontainer-build-run-examples-envs
+          imageName: dcbuilds.azurecr.io/stuartleeks/devcontainer-build-run-examples-acr
           runCmd: echo "$HELLO - $WORLD" && [[ "$HELLO - $WORLD" == "Hello - World" ]]
           env: |
             HELLO=Hello
