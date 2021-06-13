@@ -24,7 +24,7 @@ jobs:
           ACR_SECRET: ${{ secrets.ACR_SECRET }}
 
       - name: Build and run dev container task
-        uses: stuartleeks/devcontainer-build-run@v0.1-alpha
+        uses: stuartleeks/devcontainer-build-run@v0.1
         env:
           WORLD: World
         with:

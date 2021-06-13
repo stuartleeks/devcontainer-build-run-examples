@@ -25,7 +25,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and run dev container task
-        uses: stuartleeks/devcontainer-build-run@v0.1-alpha
+        uses: stuartleeks/devcontainer-build-run@v0.1
         with:
           imageName: ghcr.io/stuartleeks/devcontainer-build-run-examples-default
           runCmd: echo hello
